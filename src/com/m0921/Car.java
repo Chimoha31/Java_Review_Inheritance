@@ -7,6 +7,27 @@ public class Car {
 	private String driver;
 	private int speed;
 	
+//	以下が、Carインスタンスがmainで作られた時のデフォルトになる。
+//	new Car(何も渡さない場合)、constructor(without parameter)を探しにいく。
+//	この値が、変数mainのcarに渡されることになる。
+//	new Car(何か渡した場合)、()に入れたことが優先。入れなかったら以下のdefaultが入る。
+//	constructor (without parameter)
+	public Car() {
+		doors = "opened";
+		engine = "on";
+		driver = "seated";
+		speed = 20;
+	}
+	
+//	new Car(何か渡しす場合)、以下でparameterを渡し、mainのnew Car()に値を入れる。
+//	constructor(with parameter)
+	public Car(String doors, String engine, String driver, int speed) {
+		this.doors = doors;
+		this.engine = engine;
+		this.driver = driver;
+		this.speed = speed;
+	}
+	
 	
 	public String getDoors() {
 		return doors;
@@ -41,7 +62,7 @@ public class Car {
 	
 	
 	public String run() {
-		if(doors.equals("closed") && engine.equals("on") && driver.equals("Chiho") && speed > 0) {
+		if(doors.equals("closed") && engine.equals("on") && driver.equals("seated") && speed > 0) {
 			return "runnning";
 		}else {
 			return "not runnning";
