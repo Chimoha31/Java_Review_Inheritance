@@ -15,7 +15,7 @@ public class Main {
 //		System.out.println(car.getSpeed());
 //		System.out.println(car.getDriver());
 //		System.out.println(car.getEngine());
-//		System.out.println(car.getDoors());
+		System.out.println(car.getDoors());
 		
 		System.out.println(car.run());
 		
