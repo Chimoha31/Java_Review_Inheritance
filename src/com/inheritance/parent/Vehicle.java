@@ -30,4 +30,29 @@ public class Vehicle {
 	}
 	
 
+	public String getEngine() {
+		return engine;
+	}
+
+	public int getWheels() {
+		return wheels;
+	}
+
+	public int getSeats() {
+		return seats;
+	}
+
+	public int getFuelTank() {
+		return fuelTank;
+	}
+
+	public String getLights() {
+		return lights;
+	}
+	
+	
+	public String run() {
+		return "Hello";
+	}
+
 }
